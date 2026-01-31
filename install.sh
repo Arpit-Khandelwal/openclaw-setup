@@ -227,7 +227,9 @@ download_openclaw() {
     mkdir -p "$BIN_DIR"
     
     # Download the setup wizard
-    curl -fsSL "${REPO_URL}/raw/main/scripts/openclaw-setup.js" -o "${INSTALL_DIR}/openclaw-setup.js" 2>/dev/null || {
+    # In production, use the main branch raw content URL
+    local setup_url="https://raw.githubusercontent.com/Arpit-Khandelwal/openclaw-setup/main/openclaw-setup.js"
+    curl -fsSL "$setup_url" -o "${INSTALL_DIR}/openclaw-setup.js" || {
         log_warning "Could not download from GitHub, using bundled version..."
         # Fallback: create the setup script locally
         create_setup_script
