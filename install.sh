@@ -462,8 +462,8 @@ ${CYAN}What's next?${NC}
   1. Restart your terminal or run:
      ${YELLOW}source ~/.$(basename "$SHELL")rc${NC}
 
-  2. Run the interactive setup:
-     ${YELLOW}openclaw-setup${NC}
+  2. Run the interactive onboarding:
+     ${YELLOW}openclaw onboard${NC}
 
   3. Or start using OpenClaw:
      ${YELLOW}openclaw --help${NC}
@@ -473,13 +473,14 @@ ${GRAY}Need help? Visit https://docs.openclaw.io${NC}
 EOF
     
     # Offer to run setup now
-    printf "${CYAN}Run interactive setup now? [Y/n]${NC} "
+    printf "${CYAN}Run interactive onboarding now? [Y/n]${NC} "
     read -r response
     case "$response" in
         [Nn]*)
-            log_info "You can run setup later with: openclaw-setup"
+            log_info "You can run onboarding later with: openclaw onboard"
             ;;
         *)
+            # Run openclaw onboard (which aliases to openclaw-setup.js in our setup)
             run_setup
             ;;
     esac
