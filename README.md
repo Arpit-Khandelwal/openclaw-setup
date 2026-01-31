@@ -1,7 +1,7 @@
 # OpenClaw Setup
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/openclaw/assets/main/banner.png" alt="OpenClaw Banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.png" alt="OpenClaw Banner" width="100%" />
   
   <h3>The easiest way to build Solana AI Agents</h3>
   
@@ -27,7 +27,7 @@ Get your Solana AI Agent running in under 2 minutes.
 Works on macOS, Linux, and Windows (WSL).
 
 ```bash
-curl -fsSL https://openclaw.io/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Arpit-Khandelwal/openclaw-setup/main/install.sh | bash
 ```
 
 ### Alternative: npm
